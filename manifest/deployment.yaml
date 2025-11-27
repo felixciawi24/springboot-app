@@ -20,7 +20,6 @@ spec:
         image: felixciawi/springboot-app:v3.0
         ports:
         - containerPort: 8080
-        imagesPullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
