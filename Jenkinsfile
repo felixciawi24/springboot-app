@@ -11,7 +11,7 @@ pipeline {
         stage('Containerized Apps') {
             steps {
                 sh'''
-                docker build -t felixciawi/springboot-app .
+                docker build -t felixciawi/springboot-app:v3.0 .
                 '''
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Push to Registry') {
             steps {
                 sh'''
-                docker push felixciawi/springboot-app
+                docker push felixciawi/springboot-app:v3.0
                 '''
             }
         }
